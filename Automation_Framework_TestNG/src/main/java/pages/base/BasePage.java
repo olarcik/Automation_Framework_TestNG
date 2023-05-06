@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static common.Config.EMPLICIT_WAIT;
+import static common.Config.EXPLICIT_WAIT;
 
 public class BasePage {
     protected WebDriver driver;
@@ -19,7 +19,7 @@ public class BasePage {
     }
 
     public WebElement waitElementsIsVisible(WebElement element){
-       new WebDriverWait(driver, EMPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element));
+       new WebDriverWait(driver, EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element));
        return element;
     }
 }
